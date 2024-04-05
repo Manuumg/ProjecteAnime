@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ProjecteAnime</string>
+    <string name="title">ANIME K1NG</string>
+    <string name="home">Home</string>
+    <string name="Favoritos">Favoritos</string>
+    <string name="Profile">Profile</string>
+    <string name="menu">Menu</string>
+    <string name="logout">logout</string>
+</resources>
