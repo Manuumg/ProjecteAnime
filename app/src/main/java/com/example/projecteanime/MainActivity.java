@@ -119,7 +119,8 @@ public class MainActivity extends AppCompatActivity {
         animes.add(anime2);
         animes.add(anime3);
 
-    }*/
+    }
+    */
 
     private void getAnimes() {
         RequestQueue queue = Volley.newRequestQueue(this);
