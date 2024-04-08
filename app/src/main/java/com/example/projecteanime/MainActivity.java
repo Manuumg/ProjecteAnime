@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_view);
 
-       recyclerView =findViewById(R.id.recyclerView);
+        recyclerView =findViewById(R.id.recyclerView);
 
 
         myAdapter= new MyAdapter(animes,this);
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-   private void initData() {
+    /*private void initData() {
         Anime anime = new Anime(
                 1,
                 "The Idaten Deities Know Only Peace",
@@ -119,9 +119,9 @@ public class MainActivity extends AppCompatActivity {
         animes.add(anime2);
         animes.add(anime3);
 
-    }
+    }*/
 
-   private void getAnimes() {
+    private void getAnimes() {
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         recyclerView.setLayoutManager(new
-                                        LinearLayoutManager(getApplicationContext()));
+                                LinearLayoutManager(getApplicationContext()));
                         myAdapter = new MyAdapter(animes, getApplicationContext());
                         recyclerView.setAdapter(myAdapter);
 
