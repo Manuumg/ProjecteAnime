@@ -21,9 +21,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private Context mContext;
 
 
-    public MyAdapter( List<Anime> mAnime, Context mContext) {
-        this.mAnime = mAnime;
+    public MyAdapter(  Context mContext, List<Anime> mAnime) {
         this.mContext = mContext;
+        this.mAnime = mAnime;
     }
 
     @NonNull
@@ -38,11 +38,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.name.setText(mAnime.get(position).getName());
         holder.genre.setText(mAnime.get(position).getGenre());
-        holder.year.setText(mAnime.get(position).getYear());
-        Picasso.get().load(mAnime.get(position).getImage())
+        holder.year.setText(mAnime.get(position).getYear() + "");
+        Picasso.get().load("https://joanseculi.com/" + mAnime.get(position).getImage())
                 .fit()
                 .centerCrop()
                 .into(holder.url);
+
+        System.out.println("HOla");
 
     }
 
